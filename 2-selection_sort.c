@@ -30,7 +30,7 @@ void selection_sort(int *array, size_t size)
 			array[i] = array[min_idx];
 			array[min_idx] = tmp;
 
-			print_array(array, size); // Affiche l'état du tableau après chaque échange
+			print_array(array, size);
 		}
 	}
 }
