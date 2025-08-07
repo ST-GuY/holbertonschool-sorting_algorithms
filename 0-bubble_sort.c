@@ -11,7 +11,8 @@
  */
 void bubble_sort(int *array, size_t size)
 {
-	size_t tmp, i, j;/* Déclaration des variables pour la boucle et l'échange */
+	size_t i, j;/* Déclaration des variables pour la boucle et l'échange */
+	int tmp; /* variable temporaire */
 
 	/* Parcours du tableau plusieurs fois */
 	for (i = 0; i < size; i++)
