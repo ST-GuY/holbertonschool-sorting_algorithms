@@ -14,19 +14,21 @@ void bubble_sort(int *array, size_t size)
 	size_t i, j;/* Déclaration des variables pour la boucle et l'échange */
 	int tmp; /* variable temporaire */
 
+	if (!array || size < 2)
+		return;
 	/* Parcours du tableau plusieurs fois */
-	for (i = 0; i < size; i++)
+	for (i = 0; i < size - 1; i++)
 	{
 		/* Comparaison des éléments adjacents du tableau */
 		for (j = 0; j < size - i - 1; j++)
 		{
 			/* Si les éléments ne sont pas dans le bon ordre, on les échange */
-			if (array[j] < array[j - 1])
+			if (array[j] > array[j + 1])
 			{
 				/* Échange des deux éléments */
 				tmp = array[j];
-				array[j] = array[j - 1];
-				array[j - 1] = tmp;
+				array[j] = array[j + 1];
+				array[j + 1] = tmp;
 
 				/* Impression du tableau après chaque échange (à ajouter ici) */
 				print_array(array, size);
